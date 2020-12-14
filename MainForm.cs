@@ -33,6 +33,17 @@ namespace MathChart
                 Values = values
             });
 
+
+            var values2 = new ChartValues<double>();
+            for (var x = minValue; x <= maxValue; x++)
+            {
+                values2.Add(Math.Pow(x, 2));
+            }
+            cartesianChart1.Series.Add(new LineSeries
+            {
+                Values = values2
+            });
+
             cartesianChart1.AxisX[0].MinValue = minValue;
             cartesianChart1.AxisX[0].MaxValue = maxValue;
         }
